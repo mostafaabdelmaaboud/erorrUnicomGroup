@@ -1,0 +1,25 @@
+export interface Shop {
+    id?: null,
+    type : "1",
+    shop_activity_id: number,
+    width: number,
+    length: number,
+    employee_number: number,
+    floor_number: number,
+    area: string,
+    street: string,
+    alley: string,
+    locality: string,
+    locality_number: number,
+    license_number: number,
+    license_type: string,
+    license_date: Date,
+    license_end_date: Date,
+    billboard_name: string,
+    billboard_type: string,
+    billboard_width: number,
+    billboard_length: number,
+    billboard_height: number,
+    billboard_font_type: number
+
+}

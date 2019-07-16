@@ -1,0 +1,282 @@
+<div class="container">
+    <div class="row">
+        <form [formGroup]="form" (ngSubmit)="save()" class="sky-form">
+            <header>Create Shop</header>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="owner name" formControlName="owner_name" autocomplete="off" name="owner_name">
+                        <mat-error *ngIf="form.get('owner_name').hasError('required')">
+                            owner name is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('owner_name').hasError('pattern')">
+                            Please enter a valid owner name
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="type" formControlName="type" autocomplete="off" name="type">
+                        <mat-error *ngIf="form.get('type').hasError('required')">
+                                Type is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('type').hasError('pattern')">
+                            Please enter a valid Type
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field>
+                        <input type="number" matInput placeholder="shop activity id" formControlName="shop_activity_id" autocomplete="off" name="shop_activity_id">
+                        <mat-error *ngIf="form.get('shop_activity_id').hasError('required')">
+                                shop activity id is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('shop_activity_id').hasError('pattern')">
+                            Please enter a valid shop activity id
+                        </mat-error>                        
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="width" autocomplete="off" formControlName="width" name="width">
+                        <mat-error *ngIf="form.get('width').hasError('required')">
+                                width is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('width').hasError('pattern')">
+                            Please enter a valid width
+                        </mat-error>                          
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="length" autocomplete="off" formControlName="length" name="length">
+                        <mat-error *ngIf="form.get('length').hasError('required')">
+                                length is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('length').hasError('pattern')">
+                            Please enter a valid length
+                        </mat-error>                          
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                            <input type="number" matInput placeholder="employee number" autocomplete="off" formControlName="employee_number" name="employee_number">
+                            <mat-error *ngIf="form.get('employee_number').hasError('required')">
+                                    employee number is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="form.get('employee_number').hasError('pattern')">
+                                Please enter a valid employee number
+                            </mat-error>                          
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="floor number" autocomplete="off" formControlName="floor_number" name="floor_number">
+                        <mat-error *ngIf="form.get('floor_number').hasError('required')">
+                                floor number is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('floor_number').hasError('pattern')">
+                            Please enter a valid floor number
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                <mat-form-field class="example-full-width">
+                        <input type="text" matInput placeholder="area" autocomplete="off" formControlName="area" name="area">
+                        <mat-error *ngIf="form.get('area').hasError('required')">
+                                Area is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('area').hasError('pattern')">
+                            Please enter a valid Area
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                            <input type="text" matInput placeholder="street" autocomplete="off" formControlName="street" name="street">
+                            <mat-error *ngIf="form.get('street').hasError('required')">
+                                    street is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="form.get('street').hasError('pattern')">
+                                Please enter a valid street
+                            </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="text" matInput placeholder="alley" autocomplete="off" formControlName="alley" name="alley">
+                        <mat-error *ngIf="form.get('alley').hasError('required')">
+                                alley is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('alley').hasError('pattern')">
+                            Please enter a valid alley
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="text" matInput placeholder="locality" autocomplete="off" formControlName="locality" name="locality">
+                        <mat-error *ngIf="form.get('alley').hasError('required')">
+                                locality is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('alley').hasError('pattern')">
+                            Please enter a valid locality
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="locality number" autocomplete="off" formControlName="locality_number" name="locality_number">
+                        <mat-error *ngIf="form.get('locality_number').hasError('required')">
+                                locality number is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('locality_number').hasError('pattern')">
+                            Please enter a valid locality number
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="license number" autocomplete="off" formControlName="license_number" name="license_number">
+                        <mat-error *ngIf="form.get('license_number').hasError('required')">
+                                license number is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('license_number').hasError('pattern')">
+                            Please enter a valid license number
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                            <input type="text" matInput placeholder="license type" autocomplete="off" formControlName="license_type" name="license_type">
+                            <mat-error *ngIf="form.get('license_type').hasError('required')">
+                                    license type is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="form.get('license_type').hasError('pattern')">
+                                Please enter a valid license type
+                            </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field>
+                            
+                        <input matInput [matDatepicker]="picker" placeholder="license date" formControlName="license_date" name="license_date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker touchUi="picker"></mat-datepicker>
+                        <mat-error *ngIf="form.get('license_date').hasError('required')">
+                                license date is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('license_date').hasError('pattern')">
+                            Please enter a valid license date
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="pickerLicenseEndDate" placeholder="license end date" formControlName="license_end_date" name="license_end_date">
+                        <mat-datepicker-toggle matSuffix [for]="pickerLicenseEndDate"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerLicenseEndDate touchUi="pickerLicenseEndDate"></mat-datepicker>
+                        <mat-error *ngIf="form.get('license_end_date').hasError('required')">
+                                license end date is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('license_end_date').hasError('pattern')">
+                            Please enter a valid license end date
+                        </mat-error>
+                    </mat-form-field>                
+                </div>
+    
+            </div>    
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="text" matInput placeholder="billboard name" autocomplete="off" formControlName="billboard_name" name="billboard_name">
+                        <mat-error *ngIf="form.get('billboard_name').hasError('required')">
+                                billboard name is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('billboard_name').hasError('pattern')">
+                            Please enter a valid billboard name
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="form-group col-md-6">
+                    <mat-form-field class="example-full-width">
+                        <input type="text" matInput placeholder="billboard type" autocomplete="off" formControlName="billboard_type" name="billboard_type">
+                        <mat-error *ngIf="form.get('billboard_type').hasError('required')">
+                                billboard type is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('billboard_type').hasError('pattern')">
+                            Please enter a valid billboard type
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-row needs-validation">
+                <div class="col-md-4 mb-3">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="billboard width" autocomplete="off" formControlName="billboard_width" name="billboard_width">
+                        <mat-error *ngIf="form.get('billboard_width').hasError('required')">
+                                billboard width is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('billboard_width').hasError('pattern')">
+                            Please enter a valid billboard width
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="billboard length" autocomplete="off" formControlName="billboard_length" name="billboard_length">
+                        <mat-error *ngIf="form.get('billboard_length').hasError('required')">
+                                billboard length is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('billboard_length').hasError('pattern')">
+                            Please enter a valid billboard length
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <mat-form-field class="example-full-width">
+                        <input type="number" matInput placeholder="billboard height" autocomplete="off" formControlName="billboard_height" name="billboard_height">
+                        <mat-error *ngIf="form.get('billboard_height').hasError('required')">
+                                billboard height is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="form.get('billboard_height').hasError('pattern')">
+                            Please enter a valid billboard height
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group">
+                <mat-form-field class="example-full-width">
+                    <input type="number" matInput placeholder="billboard font type" autocomplete="off" formControlName="billboard_font_type" name="billboard_font_type">
+                    <mat-error *ngIf="form.get('billboard_font_type').hasError('required')">
+                            billboard font type is <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="form.get('billboard_font_type').hasError('pattern')">
+                        Please enter a valid billboard font type
+                    </mat-error>
+                </mat-form-field>
+            </div>        
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form> 
+    </div> 
+</div>
+
+
+

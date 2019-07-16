@@ -1,0 +1,62 @@
+$colorLogo: #b20000
+$padding17: 17px
+$transition2EaseIn: all .2s ease-in
+$ElementFlex: flex
+$paddingTopAndBotton: 30px
+/*-------------- Start Footer -----------------------*/
+.footer
+    background-color: #f8f9fa!important
+    padding: $paddingTopAndBotton 0
+.footer
+    .container
+        .copyrights
+            padding: 0
+.copyrights
+    b
+       color: $colorLogo
+.footer
+    .container
+        .row
+            justify-content: space-between
+.footer
+    .container
+        ul
+            margin: 0
+            display: $ElementFlex
+.footer
+    .container
+        ul
+            li
+                a
+                    padding-left: $padding17
+                    font-size: 22px
+                    color: #333
+                    transition: $transition2EaseIn
+.footer
+    .container
+        ul
+            li
+                a
+                    &:hover
+                        color: $colorLogo
+/*---------------- Start Responsive ----------------------*/
+@media (max-width: 768px)
+    .footer
+        .container
+            ul
+                li
+                    a
+                        padding-left: 0
+                        padding-right: $padding17
+    .copyrights 
+        margin-bottom: 15px
+        font-size: 14px
+@media (max-width: 320px)
+    .footer
+        .container
+            ul
+                li
+                    a
+                        font-size: 16px
+/*---------------- End Responsive ----------------*/
+/*-------------- End Footer -----------------------*/

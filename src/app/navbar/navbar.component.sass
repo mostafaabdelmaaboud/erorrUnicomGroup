@@ -1,0 +1,111 @@
+$width-logo: 160px
+$margin15: 15px
+$padding15: 15px
+$transition200ms: 200ms ease
+$spaceBetween: space-between
+/*------------------- Start Navbar ----------------------*/
+.container
+    .row
+        justify-content: $spaceBetween
+.navbar-brand
+    width: $width-logo
+    margin-top: -10px
+.navbar-light
+ .navbar-nav
+  .nav-link
+    font-size: 18px
+
+.navbar
+    padding-top: $margin15
+    padding-bottom: $margin15
+    border-bottom: 1px solid #ececec
+.navbar-expand-lg .navbar-toggler
+    display: block
+
+/* Start icon menu */
+
+.parent-menu
+    position: relative
+    width: 70px
+.navbar-light
+    .navbar-toggler
+        outline: 0
+.menu-toggle
+    position: absolute
+    top: 50%
+    left: 50%
+    transform-origin: center center
+    transform: translate(-50%, -50%) rotate(0deg)
+    height: 25px
+    width: 60px
+    display: flex
+    flex-direction: column
+    justify-content: $spaceBetween
+    cursor: pointer
+    transition: transform 300ms ease
+    span
+        height: 2px
+        background-color: #333
+        transition: width 200ms ease
+        &:nth-child(1)
+            width: 80%
+            transition-delay: 200ms
+        &:nth-child(2)
+            width: 100%
+        &:nth-child(3)
+            width: 60%
+            transition-delay: 400ms
+        &:nth-child(4)
+            position: absolute
+            top: -25px
+            left: 50%
+            transform: translateX(-50%)
+            display: block
+            width: 2px
+            height: 0
+            transition: height 400ms
+        
+.menu-toggeled
+  transform: translate(-50%, -50%) rotate(45deg)
+  transition-delay: 400ms
+  span:nth-child(1)
+    width: 0
+    transition: $transition200ms
+  span:nth-child(3)
+    width: 0
+    transition: $transition200ms
+    transition-delay: 150ms
+  span:nth-child(4)
+    top: -18px
+    height: 60px
+    width: 2px
+    transition: height 200ms ease
+    transition-delay: 200ms
+
+/* End icon menu */
+/* Start Responsive */
+@media (max-width: 576px)
+    .navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid
+        padding-right: 0 !important
+        padding-left: 0 !important
+@media (max-width: 320px)
+    .menu-toggle
+        height: 18px
+        width: 39px
+    .navbar-brand
+        width: 115px
+    .navbar
+        padding-right: 0
+        padding-left: 0
+    .navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid
+        padding-right: $padding15 !important
+        padding-left: $padding15 !important
+    .parent-menu
+        position: relative
+        width: 40px
+    .menu-toggeled span:nth-child(4)
+        top: -12px
+        height: 40px
+
+/* End Responsive */
+/*------------------- End Navbar ------------------------*/
