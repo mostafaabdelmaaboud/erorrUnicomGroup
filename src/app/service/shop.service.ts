@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Shop } from './shop.interface';
+import { AllproductShop, returnPostShop } from './shop.interface';
 import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class ShopService {
   addShopData = "http://197.161.95.169:8888/shop-test/api/add-shop-data";
+  urlGetAllShop = "http://197.161.95.169:8888/shop-test/api/all-shop-data";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
@@ -15,11 +15,14 @@ export class ShopService {
 
     })
   };
-
   constructor(private http: HttpClient) { }
- 
-  createShop(shop): Observable<any> {
-    return this.http.post(this.addShopData, JSON.stringify(shop), this.httpOptions)
+  // Create Shop
+  createShop(shop): Observable<returnPostShop> {
+    return this.http.post<returnPostShop>(this.addShopData, JSON.stringify(shop), this.httpOptions)
+  }
+  // get All Shops
+  getAllShops(): Observable<AllproductShop> {
+    return this.http.get<AllproductShop>(this.urlGetAllShop, this.httpOptions);
   }
 
 }

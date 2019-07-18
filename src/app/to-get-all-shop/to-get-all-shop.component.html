@@ -1,1 +1,63 @@
-<p>to-get-all-shop works!</p>
+<div class="container">
+    <div class="row">
+        <!-- Search Input -->
+        <mat-form-field>
+            <input (keyup)="applyFilter($event.target.value)" matInput placeholder="Search">
+        </mat-form-field>        
+        <div class="example-container mat-elevation-z8">
+            <table  mat-table [dataSource]="dataSource">
+                <!-- Owner Name Column -->
+                <ng-container matColumnDef="owner_name">
+                    <th mat-header-cell *matHeaderCellDef> Owner Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.owner_name}}</td>
+                </ng-container>
+                <!-- Area Column -->
+                <ng-container matColumnDef="area">
+                    <th mat-header-cell *matHeaderCellDef> Area </th>
+                    <td mat-cell *matCellDef="let element"> {{element.area}} </td>
+                </ng-container>
+                <!-- Street Column -->
+                <ng-container matColumnDef="street">
+                    <th mat-header-cell *matHeaderCellDef> Street </th>
+                    <td mat-cell *matCellDef="let element"> {{element.street}} </td>
+                </ng-container>
+                <!-- Alley Column -->
+                <ng-container matColumnDef="alley">
+                    <th mat-header-cell *matHeaderCellDef> Alley </th>
+                    <td mat-cell *matCellDef="let element"> {{element.alley}} </td>
+                </ng-container>   
+                <!-- license Date Column -->           
+                <ng-container matColumnDef="license_date">
+                    <th mat-header-cell *matHeaderCellDef> license Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.license_date}} </td>
+                </ng-container>
+                <!-- license End Date Column -->   
+                <ng-container matColumnDef="license_end_date">
+                    <th mat-header-cell  *matHeaderCellDef> license End Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.license_end_date}} </td>
+                </ng-container>
+            <!-- Star Column -->
+            <ng-container matColumnDef="star" stickyEnd>
+                <th mat-header-cell *matHeaderCellDef>IED</th>
+                <td mat-cell *matCellDef="let element">
+                    <a class="edit" (click)="openDialog(element)"><i class="fa fa-address-card" title="Info"></i></a>
+                    <!--
+                        <a class="edit"><i class="fa fa-pencil-square-o" title="Edit" aria-hidden="true"></i></a>
+                        <a class="delete"><i class="fa fa-trash" title="Delete" aria-hidden="true"></i></a>
+                    -->
+                </td>
+            </ng-container>
+            <!-- loading -->
+            <ng-container matColumnDef="loading">
+                <mat-footer-cell *matFooterCellDef colspan="6">
+                    Loading Data...
+                </mat-footer-cell>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide': dataSource!=null}">saddsa</mat-footer-row>
+            </table>
+            <mat-paginator [length]="10" [pageSize]="10" [pageSizeOptions]="[5, 10, 15, 20, 25]"  showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>

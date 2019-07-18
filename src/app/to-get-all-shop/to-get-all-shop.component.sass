@@ -1,0 +1,117 @@
+$transition3: all .2s ease
+/*--------------------------- Start Table ---------------------------*/
+.container
+    .row
+        table
+            width: 100%
+.example-container
+    margin-bottom: 50px
+.hightLight 
+    background-color: #333
+    color: white
+td,
+th
+    text-align: center !important
+.example-container
+  width: 100%
+  overflow: auto
+  background: white
+td.mat-column-star 
+  width: 20px
+  padding-right: 8px
+th.mat-column-position, td.mat-column-position 
+  padding-left: 8px
+.mat-table-sticky:first-child 
+  border-right: 1px solid #e0e0e0
+.mat-table-sticky:last-child 
+  border-left: 1px solid #e0e0e0
+.mat-paginator
+    width: 100%
+/*--- start Loading -----*/
+.hide
+    display: none
+.example-container
+    position: relative
+    min-height: 150px
+.mat-footer-row
+    position: absolute
+    width: 100%
+    height: 50px
+    z-index: 5
+mat-footer-row mat-footer-cell
+    justify-content: center
+    font-style: italic
+/*--- End Loading -----*/
+/*--- Start Info icons add and delete -----*/
+.mat-column-star
+    padding: 0 !important
+    width: 150px
+.mat-column-star
+    a
+        cursor: pointer
+        font-size: 21px
+        padding: 5px
+        margin: 2px
+        -webkit-transition: $transition3
+        -moz-transition: $transition3
+        -o-transition: $transition3
+        transition: $transition3
+.mat-column-star
+    .delete
+        color: #ec5050
+.mat-column-star
+    .delete:hover
+        color: red        
+.mat-column-star
+    .edit
+        color: #2196f3
+.mat-column-star
+    .edit:hover
+        color: #0b6bb7
+/*--- End Info icons add and delete -----*/
+tr.mat-row
+    -webkit-transition: $transition3
+    -moz-transition: $transition3
+    -o-transition: $transition3
+    transition: $transition3
+tr.mat-row:hover
+    background-color: #c9cbc8
+/*--- Start Responsive -----*/
+// max width screen 575.98px
+@media (max-width: 575.98px)
+    table
+        width: 600px !important
+    .mat-paginator-range-label 
+        margin: 0 !important
+        font-size: 12px !important
+    td.mat-cell, td.mat-footer-cell, th.mat-header-cell 
+        padding: 10px
+    td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type 
+        padding-left: 10px
+    .mat-column-star
+        width: 62px !important
+    .mat-column-star
+        a
+            display: block
+            margin: 0
+
+// min width screen 576px
+@media (min-width: 576px)
+    table
+        width: 800px !important
+
+// min width screen 768px
+@media (min-width: 768px)
+    table
+        width: 1000px !important
+
+// min width screen 992px
+@media (min-width: 992px)
+    table
+        width: 1500px !important
+/*--- End Responsive -----*/
+.mat-form-field
+    width: 100%
+.mat-form-field
+    margin: 22px 0 10px 0 !important
+/*--------------------------- End Table -------------------------- */

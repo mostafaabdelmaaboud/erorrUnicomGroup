@@ -3,30 +3,29 @@
         <form [formGroup]="form" (ngSubmit)="save()" class="sky-form">
             <header>Create Shop</header>
             <div class="form-row">
+                <!--Start input owner name -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input matInput placeholder="owner name" formControlName="owner_name" autocomplete="off" name="owner_name">
-                        <mat-error *ngIf="form.get('owner_name').hasError('required')">
-                            owner name is <strong>required</strong>
-                        </mat-error>
-                        <mat-error *ngIf="form.get('owner_name').hasError('pattern')">
-                            Please enter a valid owner name
-                        </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input owner name -->
+                <!--Start input type -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="type" formControlName="type" autocomplete="off" name="type">
-                        <mat-error *ngIf="form.get('type').hasError('required')">
+                        <mat-error *ngIf="form.get('type').hasError('required') && formValidate">
                                 Type is <strong>required</strong>
                         </mat-error>
-                        <mat-error *ngIf="form.get('type').hasError('pattern')">
+                        <mat-error *ngIf="form.get('type').hasError('pattern') && formValidate">
                             Please enter a valid Type
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input type -->
             </div>
             <div class="form-row">
+                <!--Start input shop activity id -->
                 <div class="form-group col-md-6">
                     <mat-form-field>
                         <input type="number" matInput placeholder="shop activity id" formControlName="shop_activity_id" autocomplete="off" name="shop_activity_id">
@@ -38,6 +37,8 @@
                         </mat-error>                        
                     </mat-form-field>
                 </div>
+                <!--End input shop activity id -->
+                <!--Start input width -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="width" autocomplete="off" formControlName="width" name="width">
@@ -49,8 +50,10 @@
                         </mat-error>                          
                     </mat-form-field>
                 </div>
+                <!--End input width -->
             </div>
             <div class="form-row">
+                <!--Start input length -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="length" autocomplete="off" formControlName="length" name="length">
@@ -62,6 +65,8 @@
                         </mat-error>                          
                     </mat-form-field>
                 </div>
+                <!--End input length -->
+                <!--Start input employee number -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                             <input type="number" matInput placeholder="employee number" autocomplete="off" formControlName="employee_number" name="employee_number">
@@ -73,8 +78,10 @@
                             </mat-error>                          
                     </mat-form-field>
                 </div>
+                <!--End input employee number -->
             </div>
             <div class="form-row">
+                <!--Start input floor number -->
                 <div class="form-group col-md-6">
                 <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="floor number" autocomplete="off" formControlName="floor_number" name="floor_number">
@@ -86,6 +93,8 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input floor number -->
+                <!--Start input area -->
                 <div class="form-group col-md-6">
                 <mat-form-field class="example-full-width">
                         <input type="text" matInput placeholder="area" autocomplete="off" formControlName="area" name="area">
@@ -98,8 +107,10 @@
                     </mat-form-field>
 
                 </div>
+                <!--Start input area -->
             </div>
             <div class="form-row">
+                <!--Start input street -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                             <input type="text" matInput placeholder="street" autocomplete="off" formControlName="street" name="street">
@@ -111,6 +122,8 @@
                             </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input street -->
+                <!--Start input alley -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="text" matInput placeholder="alley" autocomplete="off" formControlName="alley" name="alley">
@@ -122,8 +135,10 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input alley -->
             </div>            
             <div class="form-row">
+                <!--Start input locality -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="text" matInput placeholder="locality" autocomplete="off" formControlName="locality" name="locality">
@@ -134,8 +149,9 @@
                             Please enter a valid locality
                         </mat-error>
                     </mat-form-field>
-
                 </div>
+                <!--End input locality -->
+                <!--Start input locality number -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="locality number" autocomplete="off" formControlName="locality_number" name="locality_number">
@@ -146,10 +162,11 @@
                             Please enter a valid locality number
                         </mat-error>
                     </mat-form-field>
-
                 </div>
+                <!--End input locality number -->
             </div>
             <div class="form-row">
+                <!--Start input license number -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="license number" autocomplete="off" formControlName="license_number" name="license_number">
@@ -161,6 +178,8 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input license number -->
+                <!--Start input license type -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                             <input type="text" matInput placeholder="license type" autocomplete="off" formControlName="license_type" name="license_type">
@@ -172,11 +191,12 @@
                             </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input license type -->
             </div>
             <div class="form-row">
+                <!--Start input license date -->
                 <div class="form-group col-md-6">
                     <mat-form-field>
-                            
                         <input matInput [matDatepicker]="picker" placeholder="license date" formControlName="license_date" name="license_date">
                         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker touchUi="picker"></mat-datepicker>
@@ -188,6 +208,8 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input license date -->
+                <!--Start input license end date -->
                 <div class="form-group col-md-6">
                     <mat-form-field>
                         <input matInput [matDatepicker]="pickerLicenseEndDate" placeholder="license end date" formControlName="license_end_date" name="license_end_date">
@@ -201,9 +223,10 @@
                         </mat-error>
                     </mat-form-field>                
                 </div>
-    
+                <!--End input license end date -->
             </div>    
             <div class="form-row">
+                <!--Start input billboard name -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="text" matInput placeholder="billboard name" autocomplete="off" formControlName="billboard_name" name="billboard_name">
@@ -215,6 +238,8 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input billboard name -->
+                <!--Start input billboard type -->
                 <div class="form-group col-md-6">
                     <mat-form-field class="example-full-width">
                         <input type="text" matInput placeholder="billboard type" autocomplete="off" formControlName="billboard_type" name="billboard_type">
@@ -226,8 +251,10 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input billboard type -->
             </div>
             <div class="form-row needs-validation">
+                <!--Start input billboard width -->
                 <div class="col-md-4 mb-3">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="billboard width" autocomplete="off" formControlName="billboard_width" name="billboard_width">
@@ -239,6 +266,8 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input billboard width -->
+                <!--Start input billboard length -->
                 <div class="col-md-4 mb-3">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="billboard length" autocomplete="off" formControlName="billboard_length" name="billboard_length">
@@ -250,6 +279,8 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input billboard length-->
+                <!--Start input billboard height-->
                 <div class="col-md-4 mb-3">
                     <mat-form-field class="example-full-width">
                         <input type="number" matInput placeholder="billboard height" autocomplete="off" formControlName="billboard_height" name="billboard_height">
@@ -261,10 +292,12 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
+                <!--End input billboard height-->
             </div>
+            <!--Start input billboard font type -->
             <div class="form-group">
                 <mat-form-field class="example-full-width">
-                    <input type="number" matInput placeholder="billboard font type" autocomplete="off" formControlName="billboard_font_type" name="billboard_font_type">
+                    <input type="text" matInput placeholder="billboard font type" autocomplete="off" formControlName="billboard_font_type" name="billboard_font_type">
                     <mat-error *ngIf="form.get('billboard_font_type').hasError('required')">
                             billboard font type is <strong>required</strong>
                     </mat-error>
@@ -272,8 +305,12 @@
                         Please enter a valid billboard font type
                     </mat-error>
                 </mat-form-field>
-            </div>        
+            </div>     
+            <!--End input billboard font type -->
             <button class="btn btn-primary" type="submit">Save</button>
+            <div *ngIf="loadingEntryShp" class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
         </form> 
     </div> 
 </div>

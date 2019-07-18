@@ -5,8 +5,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material';
 import {MatSelectModule} from '@angular/material/select';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const materials = [
@@ -15,8 +13,6 @@ const materials = [
   MatFormFieldModule,
   MatNativeDateModule,
   MatSelectModule,
-  MatSidenavModule,
-  MatListModule,
   MatSnackBarModule
 ];
 @NgModule({
@@ -26,4 +22,4 @@ const materials = [
   ],
   exports: [materials],
 })
-export class MaterialModule { }
+export class MaterialFormModule { }
